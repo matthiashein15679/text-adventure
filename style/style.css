@@ -1,5 +1,13 @@
 .text-area {
     min-width: 400px;
     height: 600px;
-    background-color: black;
+    border-right: 1px solid black;
+    overflow: scroll;
+    background-color: antiquewhite;
+    margin-bottom: 5px;
+}
+
+.text-area {
+    text-align: left;
+    padding-top: 6px;
 }
