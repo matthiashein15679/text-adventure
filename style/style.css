@@ -3,11 +3,24 @@
     height: 600px;
     border-right: 1px solid black;
     overflow: scroll;
-    background-color: antiquewhite;
+    background-color: white;
     margin-bottom: 5px;
 }
 
 .text-area {
     text-align: left;
-    padding-top: 6px;
+    padding-top: 15px;
+}
+
+.name {
+    padding-left: 40px;
+}
+
+.textInput {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.buttonSend {
+    display: none;
 }

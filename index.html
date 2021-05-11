@@ -19,15 +19,13 @@
     <div class="container-fluid bg-primary p-3">
         <div class="row">
             <div class="col-8">
-                <div class="text-area" id="text-field">
-
-                </div>
+                <div class="text-area" id="text-field"></div>
                 <div class="text-input">
-                  <textarea id="text-input"  rows="1" cols="100"></textarea>
-                  <button id="send" onclick="messageSend();">send</button>
+                  <input class="textInput" type="text" id="text-input" placeholder="Text eingeben"></input>
+                  <button class="buttonSend" id="send" onclick="messageSend();">send</button>
                 </div>
             </div>
-            <div class="col-4">Spielerkarte
+            <div class="col-4">
               <p id="spielername"></p>
             </div>
             

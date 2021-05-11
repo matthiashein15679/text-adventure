@@ -21,12 +21,22 @@ let moderator_text = [
 
 let end = moderator_text.length;
 
+let submitButton = document.getElementById("text-input");
+submitButton.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("send").click();
+    }
+  });
 
 
 function messageSend(){
     text = document.getElementById("text-input").value;
     gamer_text.push(text);
-    document.getElementById("text-field").innerHTML += "<pre>" + nameGamer + ":     " + text + "</pre>";
+    document.getElementById("text-field").innerHTML += '<div class="row"><div class="col-2 name">' + nameGamer + ': </div><div class="col-10">' + text + '</div></div>';
     document.getElementById("text-input").value = '';
     moderator = 1;
     gamer = 0;
@@ -56,7 +66,7 @@ setInterval(next,3000);
 
 function next() {
     if (moderator == 1 && end > moderator_count) {
-        document.getElementById("text-field").innerHTML += "<pre>Moderator: " + moderator_text[moderator_count] + "</pre>";
+        document.getElementById("text-field").innerHTML += '<div class="row"><div class="col-2 name">Moderator: </div><div class="col-10">' + moderator_text[moderator_count] + '</div></div>';
         moderator_count += 1;
         moderator = 0;
         gamer = 1;
